@@ -69,8 +69,24 @@ const FilmShader = {
 export class Renderer {
   constructor(canvas) {
     this.canvas = canvas;
-    this.renderer = new THREE.WebGLRenderer({ canvas, antialias: true, powerPreference: 'high-performance' });
-    this.renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+    // 画面经过后期合成（EffectComposer）再输出，画布自身的 MSAA 对最终画面没有作用，
+    // 只会在 Retina 全屏下多占一大块显存；关掉它。
+    this.renderer = new THREE.WebGLRenderer({ canvas, antialias: false, powerPreference: 'high-performance' });
+    this.contextLost = false;
+    // WebGL 上下文丢失（显存吃紧、GPU 进程重启）时默认整页就废了，必须刷新。
+    // 这里接住事件让浏览器恢复上下文，three.js 会重新编译着色器、重传资源，游戏继续。
+    canvas.addEventListener('webglcontextlost', (e) => {
+      e.preventDefault();
+      this.contextLost = true;
+      console.warn('[render] WebGL 上下文丢失，等待恢复…');
+      this.onContextLost?.();
+    });
+    canvas.addEventListener('webglcontextrestored', () => {
+      this.contextLost = false;
+      console.warn('[render] WebGL 上下文已恢复');
+      this.resize();
+      this.onContextRestored?.();
+    });
     this.renderer.outputColorSpace = THREE.SRGBColorSpace;
     this.renderer.toneMapping = THREE.ACESFilmicToneMapping;
     this.renderer.toneMappingExposure = 1.15;
@@ -99,15 +115,21 @@ export class Renderer {
     const h = window.innerHeight;
     this.zeroSize = w === 0 || h === 0;
     if (this.zeroSize) return;
+    // 渲染像素总量封顶（约 1080p 的 1.3 倍）。Retina 全屏按 2 倍渲染是 560 万像素，
+    // 合成缓冲 + 辉光 mip 链会吃掉几百 MB 显存，是浏览器杀掉 GPU 进程的主因。
+    const MAX_PIXELS = 2.7e6;
+    const dpr = Math.min(window.devicePixelRatio || 1, 2, Math.sqrt(MAX_PIXELS / (w * h)));
+    this.renderer.setPixelRatio(dpr);
     this.renderer.setSize(w, h, false);
     this.composer.setSize(w, h);
-    this.bloom.setSize(w, h);
+    // 辉光本来就是模糊的，用一半分辨率看不出差别，显存和耗时都降到 1/4
+    this.bloom.setSize(Math.ceil(w / 2), Math.ceil(h / 2));
     this.camera.aspect = w / h;
     this.camera.updateProjectionMatrix();
   }
 
   render(time) {
-    if (this.zeroSize) return;
+    if (this.zeroSize || this.contextLost) return;
     this.film.uniforms.uTime.value = time;
     this.composer.render();
   }

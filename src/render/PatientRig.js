@@ -20,6 +20,18 @@ const EXIT_POS = [-4.3, 0, DOOR_Z];
 // 走路动作的原始步速（米/秒）；走得更快时按比例加快动作，脚不打滑
 const WALK_CLIP_SPEED = 1.17;
 
+// 病人离开后释放这一位占用的显存：切割材质副本、蒙皮后的义体、骨骼贴图、占位几何体。
+// 几何体和贴图数据还留在内存里（资产缓存共用），再来一位同样的病人会自动重新上传，
+// 不释放的话每台手术都在显存里多留一份，玩久了 GPU 进程会被浏览器杀掉。
+function disposeTree(root) {
+  root.traverse((obj) => {
+    if (obj.isSkinnedMesh) obj.skeleton?.dispose?.();
+    if (obj.geometry) obj.geometry.dispose();
+    const mats = Array.isArray(obj.material) ? obj.material : obj.material ? [obj.material] : [];
+    for (const m of mats) m.dispose();
+  });
+}
+
 // 病人：加载模型、走位、按部位切开、旧部件、挂义体、躺上手术台。
 export class PatientRig {
   constructor(scene) {
@@ -115,7 +127,9 @@ export class PatientRig {
     this.tweenState = null;
     this.skinned = {};
     for (const obj of [this.bodyRoot, this.limbRoot, this.cover]) {
-      if (obj) obj.removeFromParent();
+      if (!obj) continue;
+      obj.removeFromParent();
+      disposeTree(obj);
     }
     this.bodyRoot = null;
     this.limbRoot = null;

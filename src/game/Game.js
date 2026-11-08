@@ -64,6 +64,8 @@ export class Game {
 
   async init() {
     this.renderer = new Renderer(document.getElementById('scene'));
+    this.renderer.onContextLost = () => this.ui?.toast?.('显卡资源紧张，画面正在恢复…', 'warn');
+    this.renderer.onContextRestored = () => this.ui?.toast?.('画面已恢复');
     this.overlay = new Overlay(document.getElementById('overlay'), this.renderer.camera);
     this.sfx = new Sfx();
     this.music = new Music(this.sfx);
