@@ -1,0 +1,5 @@
+[
+  { "night": 1, "title": "第 1 晚 · 开张", "tutorial": true, "queue": ["aqiang", "jinya"] },
+  { "night": 2, "title": "第 2 晚", "tutorial": false, "queue": ["xiaolin", "lili"] },
+  { "night": 3, "title": "第 3 晚 · 鬼市货", "tutorial": false, "queue": ["daoba", "revisit:aqiang"] }
+]

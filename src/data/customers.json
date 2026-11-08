@@ -1,0 +1,84 @@
+[
+  {
+    "id": "aqiang",
+    "name": "阿强",
+    "job": "送货骑手",
+    "slot": "leg",
+    "side": "left",
+    "budget": 2000,
+    "capacity": 4,
+    "best": "sprint_leg",
+    "lines": {
+      "enter": "今晚又超时三单，平台要扣钱了。给我换双快点的腿。",
+      "happy": "这腿……轻得像没装一样！今晚我能多跑二十单。",
+      "meh": "能跑是能跑，就是走起来有点别扭。",
+      "fail": "你、你这是在干什么？！我不做了！",
+      "revisitHappy": "医生！这腿太神了，这周我是全站第一。这点钱你收下。",
+      "revisitAngry": "缝的地方一跑就疼，你得给我重新弄一下。"
+    }
+  },
+  {
+    "id": "jinya",
+    "name": "金牙",
+    "job": "夜市二手贩子",
+    "slot": "eye",
+    "side": "left",
+    "budget": 1000,
+    "capacity": 3,
+    "best": "appraiser_eye",
+    "lines": {
+      "enter": "这条街上一半的货是假的，我得一眼看出来。",
+      "happy": "嘿，那边那块表是假的！好东西，好东西。",
+      "meh": "看是看得清，可分不出真假啊。",
+      "fail": "我眼前一片黑！钱我不给了！"
+    }
+  },
+  {
+    "id": "xiaolin",
+    "name": "小林",
+    "job": "公司码农",
+    "slot": "arm",
+    "side": "left",
+    "budget": 3000,
+    "capacity": 2,
+    "best": "precision_arm",
+    "lines": {
+      "enter": "手腕疼得敲不了代码，可这周不能请假。",
+      "happy": "一分钟三百字，一个错都没有。下周的需求我包了。",
+      "meh": "有点沉，打字老是按错键。",
+      "fail": "我的手……我明天还要上线啊！"
+    }
+  },
+  {
+    "id": "lili",
+    "name": "莉莉",
+    "job": "全息主播",
+    "slot": "face",
+    "side": "center",
+    "budget": 2500,
+    "capacity": 3,
+    "best": "voice_mask",
+    "lines": {
+      "enter": "粉丝说我声音太普通，我要一把让人记住的嗓子。",
+      "happy": "宝宝们听到了吗？这个声音绝了！",
+      "meh": "好看是好看，可声音还是老样子。",
+      "fail": "直播要开始了你给我弄成这样？差评！"
+    }
+  },
+  {
+    "id": "daoba",
+    "name": "刀疤",
+    "job": "帮派打手",
+    "slot": "arm",
+    "side": "left",
+    "budget": 5000,
+    "capacity": 6,
+    "best": "blade_arm",
+    "lines": {
+      "enter": "要一把藏在胳膊里的刀。钱不是问题。",
+      "happy": "咔。好刀。今晚的事你什么都没看见。",
+      "meh": "力气是大了，可我要的是刀。",
+      "fail": "你知道我是谁的人吗？"
+    }
+  }
+]

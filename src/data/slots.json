@@ -1,0 +1,47 @@
+{
+  "eye": {
+    "label": "眼睛",
+    "cutMode": "overlay",
+    "hollow": true,
+    "mainAxis": "z",
+    "incision": { "type": "ring", "radius": 0.022, "points": 40 },
+    "removal": { "label": "旧镜片", "threshold": 0.04, "heavy": 0.45, "tearSpeed": 900 },
+    "align": { "axes": 1, "tolDeg": 10, "hover": 0.06 },
+    "wires": 3,
+    "stitches": 4,
+    "bpm": 120
+  },
+  "face": {
+    "label": "面部",
+    "cutMode": "overlay",
+    "mainAxis": "z",
+    "incision": { "type": "arc", "radius": 0.06, "points": 40, "fromDeg": 200, "toDeg": 340 },
+    "removal": { "label": "旧面罩", "threshold": 0.06, "heavy": 0.5, "tearSpeed": 1100 },
+    "align": { "axes": 2, "tolDeg": 12, "hover": 0.08 },
+    "wires": 4,
+    "stitches": 6,
+    "bpm": 100
+  },
+  "arm": {
+    "label": "手臂",
+    "cutMode": "volume",
+    "mainAxis": "y",
+    "incision": { "type": "ring", "radius": 0.075, "points": 48 },
+    "removal": { "label": "旧手臂", "threshold": 0.18, "heavy": 0.25, "tearSpeed": 1400 },
+    "align": { "axes": 2, "tolDeg": 12, "hover": 0.14 },
+    "wires": 5,
+    "stitches": 6,
+    "bpm": 100
+  },
+  "leg": {
+    "label": "腿",
+    "cutMode": "volume",
+    "mainAxis": "y",
+    "incision": { "type": "ring", "radius": 0.08, "points": 48 },
+    "removal": { "label": "旧腿", "threshold": 0.22, "heavy": 0.2, "tearSpeed": 1500 },
+    "align": { "axes": 1, "tolDeg": 12, "hover": 0.14 },
+    "wires": 4,
+    "stitches": 6,
+    "bpm": 100
+  }
+}

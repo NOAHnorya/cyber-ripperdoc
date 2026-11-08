@@ -1,0 +1,164 @@
+[
+  {
+    "id": "surgery_rig",
+    "name": "立式手术架",
+    "model": "models/props/prop_surgery_rig.glb",
+    "upgrade": null,
+    "size_m": [
+      1.200149,
+      2.2,
+      1.030267
+    ],
+    "tris": 38990
+  },
+  {
+    "id": "surgery_lamp",
+    "name": "手术灯",
+    "model": "models/props/prop_surgery_lamp.glb",
+    "upgrade": null,
+    "size_m": [
+      1.324714,
+      1.280242,
+      0.68623
+    ],
+    "tris": 19178
+  },
+  {
+    "id": "tool_cart",
+    "name": "器械推车",
+    "model": "models/props/prop_tool_cart.glb",
+    "upgrade": null,
+    "size_m": [
+      0.936216,
+      0.89873,
+      0.528066
+    ],
+    "tris": 19194
+  },
+  {
+    "id": "recycle_tray",
+    "name": "回收托盘",
+    "model": "models/props/prop_recycle_tray.glb",
+    "upgrade": null,
+    "size_m": [
+      0.599926,
+      0.799065,
+      0.413777
+    ],
+    "tris": 19994
+  },
+  {
+    "id": "implant_shelf",
+    "name": "义体货架",
+    "model": "models/props/prop_implant_shelf.glb",
+    "upgrade": null,
+    "size_m": [
+      1.499729,
+      1.999678,
+      0.758811
+    ],
+    "tris": 19194
+  },
+  {
+    "id": "laser_lv1",
+    "name": "激光刀 Lv1（改装电焊枪）",
+    "model": "models/props/prop_laser_lv1.glb",
+    "upgrade": {
+      "key": "laser",
+      "level": 1
+    },
+    "size_m": [
+      0.108591,
+      0.151519,
+      0.349907
+    ],
+    "tris": 19196
+  },
+  {
+    "id": "laser_lv2",
+    "name": "激光刀 Lv2（精密激光笔）",
+    "model": "models/props/prop_laser_lv2.glb",
+    "upgrade": {
+      "key": "laser",
+      "level": 2
+    },
+    "size_m": [
+      0.023009,
+      0.027984,
+      0.249984
+    ],
+    "tris": 19198
+  },
+  {
+    "id": "scanner_lv1",
+    "name": "神经扫描仪 Lv1（旧显像管显示器）",
+    "model": "models/props/prop_scanner_lv1.glb",
+    "upgrade": {
+      "key": "scanner",
+      "level": 1
+    },
+    "size_m": [
+      0.499584,
+      0.635699,
+      0.445321
+    ],
+    "tris": 19196
+  },
+  {
+    "id": "scanner_lv2",
+    "name": "神经扫描仪 Lv2（全息扫描屏）",
+    "model": "models/props/prop_scanner_lv2.glb",
+    "upgrade": {
+      "key": "scanner",
+      "level": 2
+    },
+    "size_m": [
+      0.599498,
+      0.821983,
+      0.525445
+    ],
+    "tris": 19200
+  },
+  {
+    "id": "surgery_table",
+    "name": "卧式手术台",
+    "model": "models/props/prop_surgery_table.glb",
+    "upgrade": null,
+    "size_m": [
+      1.539165,
+      0.990666,
+      2.049967
+    ],
+    "tris": 19208,
+    "patientPose": {
+      "rotationX": -1.5707963267948966,
+      "positionByPatient": {
+        "aqiang": [
+          -0.207,
+          1.0145,
+          0.79
+        ],
+        "jinya": [
+          -0.207,
+          0.986,
+          0.79
+        ],
+        "xiaolin": [
+          -0.207,
+          0.9929,
+          0.79
+        ],
+        "lili": [
+          -0.207,
+          0.9955,
+          0.79
+        ],
+        "daoba": [
+          -0.207,
+          1.0242,
+          0.79
+        ]
+      }
+    }
+  }
+]

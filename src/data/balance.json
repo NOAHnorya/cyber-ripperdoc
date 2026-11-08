@@ -1,0 +1,21 @@
+{
+  "startMoney": 2000,
+  "rentPerNight": 500,
+  "costRatio": 0.55,
+  "qualityMultiplier": { "perfect": 1.2, "good": 1.0, "poor": 0.8, "fail": 0 },
+  "qualityThresholds": { "perfect": 85, "good": 60 },
+  "tipRange": [0.1, 0.3],
+  "mismatchFactor": 0.7,
+  "mistakePenaltySeconds": 5,
+  "difficultyTolerance": { "1": 1.2, "2": 1.0, "3": 0.8 },
+  "extraWiresOnOverload": 2,
+  "rejectionBase": { "tianqiong": 0.05, "anvil": 0.1, "laozhou": 0.2, "ghost": 0.3 },
+  "reputation": { "start": 3, "min": 1, "max": 5, "perfect": 0.5, "fail": -1, "discountBonus": 1 },
+  "revisit": { "tip": 300, "fixRepBonus": 0.5 },
+  "brands": {
+    "tianqiong": "天穹医疗",
+    "anvil": "铁砧重工",
+    "laozhou": "老周翻新",
+    "ghost": "鬼市"
+  }
+}

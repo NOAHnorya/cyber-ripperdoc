@@ -1,0 +1,80 @@
+[
+  {
+    "key": "laser",
+    "name": "激光刀",
+    "affects": "切开",
+    "desc": "切开容差变宽，并自动吸附切口线",
+    "price": 1500,
+    "mvp": true,
+    "props": ["laser_lv1", "laser_lv2"],
+    "levels": [
+      { "incisionTolPx": 12, "incisionSnap": false },
+      { "incisionTolPx": 20, "incisionSnap": true }
+    ]
+  },
+  {
+    "key": "scanner",
+    "name": "神经扫描仪",
+    "affects": "接线",
+    "desc": "鬼市货也能显示接线图",
+    "price": 1500,
+    "mvp": true,
+    "props": ["scanner_lv1", "scanner_lv2"],
+    "levels": [
+      { "wiringRevealHidden": false },
+      { "wiringRevealHidden": true }
+    ]
+  },
+  {
+    "key": "neon",
+    "name": "霓虹招牌",
+    "affects": "客源",
+    "desc": "小费 +20%，客人预算 +20%",
+    "price": 2000,
+    "mvp": true,
+    "props": [],
+    "levels": [
+      { "tipBonus": 0, "budgetBonus": 0 },
+      { "tipBonus": 0.2, "budgetBonus": 0.2 }
+    ]
+  },
+  {
+    "key": "assist_arm",
+    "name": "机械辅助臂",
+    "affects": "拆除、对位",
+    "desc": "拆除阻力 −30%，对位容差 +5°",
+    "price": 2500,
+    "mvp": false,
+    "props": [],
+    "levels": [
+      { "removalResistance": 1, "alignTolBonusDeg": 0 },
+      { "removalResistance": 0.7, "alignTolBonusDeg": 5 }
+    ]
+  },
+  {
+    "key": "suture_gun",
+    "name": "纳米缝合枪",
+    "affects": "缝合",
+    "desc": "判定窗口变宽，针数 −2",
+    "price": 1200,
+    "mvp": false,
+    "props": [],
+    "levels": [
+      { "sutureWindowMs": 120, "sutureStitchDelta": 0 },
+      { "sutureWindowMs": 180, "sutureStitchDelta": -2 }
+    ]
+  },
+  {
+    "key": "anesthesia",
+    "name": "麻醉机",
+    "affects": "全程",
+    "desc": "麻醉时间 90 → 120 秒",
+    "price": 1000,
+    "mvp": false,
+    "props": [],
+    "levels": [
+      { "anesthesiaSeconds": 90 },
+      { "anesthesiaSeconds": 120 }
+    ]
+  }
+]

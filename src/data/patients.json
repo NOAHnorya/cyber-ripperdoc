@@ -1,0 +1,97 @@
+[
+  {
+    "id": "aqiang",
+    "name": "阿强",
+    "job": "送货骑手",
+    "slot": "leg",
+    "side": "left",
+    "height_m": 1.75,
+    "slots": {},
+    "model": "models/patients/patient_aqiang.glb",
+    "thumb": "models/patients/thumbs/patient_aqiang.png",
+    "size_m": [
+      1.226341,
+      1.75,
+      0.370273
+    ],
+    "tris": 76500,
+    "rigged": "models/patients/rigged/patient_aqiang.glb",
+    "riggedAnims": "models/patients/rigged/anims_shared.glb"
+  },
+  {
+    "id": "jinya",
+    "name": "金牙",
+    "job": "夜市二手贩子",
+    "slot": "eye",
+    "side": null,
+    "height_m": 1.75,
+    "slots": {},
+    "model": "models/patients/patient_jinya.glb",
+    "thumb": "models/patients/thumbs/patient_jinya.png",
+    "size_m": [
+      0.938421,
+      1.75,
+      0.311632
+    ],
+    "tris": 76500,
+    "rigged": "models/patients/rigged/patient_jinya.glb",
+    "riggedAnims": "models/patients/rigged/anims_shared.glb"
+  },
+  {
+    "id": "xiaolin",
+    "name": "小林",
+    "job": "公司码农",
+    "slot": "arm",
+    "side": "left",
+    "height_m": 1.75,
+    "slots": {},
+    "model": "models/patients/patient_xiaolin.glb",
+    "thumb": "models/patients/thumbs/patient_xiaolin.png",
+    "size_m": [
+      0.971374,
+      1.75,
+      0.301111
+    ],
+    "tris": 76500,
+    "rigged": "models/patients/rigged/patient_xiaolin.glb",
+    "riggedAnims": "models/patients/rigged/anims_shared.glb"
+  },
+  {
+    "id": "lili",
+    "name": "莉莉",
+    "job": "全息主播",
+    "slot": "face",
+    "side": null,
+    "height_m": 1.75,
+    "slots": {},
+    "model": "models/patients/patient_lili.glb",
+    "rigged": "models/patients/rigged/patient_lili.glb",
+    "riggedAnims": "models/patients/rigged/anims_shared.glb",
+    "thumb": "models/patients/thumbs/patient_lili.png",
+    "size_m": [
+      0.937193,
+      1.75,
+      0.319857
+    ],
+    "tris": 76500
+  },
+  {
+    "id": "daoba",
+    "name": "刀疤",
+    "job": "帮派打手",
+    "slot": "arm",
+    "side": "left",
+    "height_m": 1.75,
+    "slots": {},
+    "model": "models/patients/patient_daoba.glb",
+    "thumb": "models/patients/thumbs/patient_daoba.png",
+    "size_m": [
+      0.930303,
+      1.75,
+      0.405416
+    ],
+    "tris": 76000,
+    "rigged": "models/patients/rigged/patient_daoba.glb",
+    "riggedAnims": "models/patients/rigged/anims_shared.glb"
+  }
+]

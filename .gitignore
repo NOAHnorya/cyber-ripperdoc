@@ -1,0 +1,13 @@
+node_modules/
+tools/node_modules/
+dist/
+
+.env
+.env.*
+
+# 原始素材与中间文件（1.6G，不进仓库）
+raw/
+_to_delete/
+.claude-incoming/
+
+.DS_Store

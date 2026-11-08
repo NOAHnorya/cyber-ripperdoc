@@ -1,0 +1,714 @@
+[
+  {
+    "meta": {
+      "id": "appraiser_eye",
+      "name": "鉴伪义眼",
+      "slot": "eye",
+      "desc": "扫描物品和电子货币，一眼识别假货和真实价值",
+      "load": 1,
+      "price": 600,
+      "brand": "anvil",
+      "difficulty": 1,
+      "wires": 3,
+      "wiringHidden": false,
+      "model": "models/implants/implant_appraiser_eye.glb",
+      "thumb": "models/implants/thumbs/implant_appraiser_eye.png"
+    },
+    "dimensions": {
+      "x": 0.025
+    },
+    "triangleLimit": 20000,
+    "textureLimit": 1024,
+    "origin": "sphere",
+    "prompt": "a single cyberpunk cybernetic eye implant, spherical eyeball module with a multi-layer zoom lens on the front, an engraved scale ring around the lens, a tiny scanner probe on one side, held in a thin mounting ring, industrial brushed steel, orange safety paint, hazard stripes, standard connector stub at the back with one alignment notch and small colored pin contacts, isolated product shot, centered, 3/4 view, plain white background, soft even studio lighting, no shadows, high detail",
+    "calibration": {
+      "anchor": [
+        0.045,
+        0,
+        -0.015
+      ],
+      "featureSpan": {
+        "x": 0.785
+      }
+    }
+  },
+  {
+    "meta": {
+      "id": "voice_mask",
+      "name": "变声面甲",
+      "slot": "face",
+      "desc": "覆盖下半张脸，可以变声和实时翻译",
+      "load": 2,
+      "price": 1800,
+      "brand": "tianqiong",
+      "difficulty": 2,
+      "wires": 4,
+      "wiringHidden": false,
+      "model": "models/implants/implant_voice_mask.glb",
+      "thumb": "models/implants/thumbs/implant_voice_mask.png"
+    },
+    "dimensions": {
+      "x": 0.16,
+      "y": 0.12
+    },
+    "triangleLimit": 20000,
+    "textureLimit": 1024,
+    "origin": "inner",
+    "prompt": "a cyberpunk lower-face voice modulator mask covering the mouth, jaw and chin, sleek streamlined shape, vertical speaker grille slots on the front, thin light strips along both cheeks, three mounting clips along the lower jaw edge, clean white ceramic shell, thin gold lines, medical grade, isolated product shot, centered, 3/4 view, plain white background, soft even studio lighting, no shadows, high detail",
+    "calibration": {
+      "anchor": [
+        0,
+        0,
+        0.215
+      ]
+    }
+  },
+  {
+    "meta": {
+      "id": "precision_arm",
+      "name": "精工义手",
+      "slot": "arm",
+      "desc": "手指稳定到微米级，打字、修表都不抖",
+      "load": 2,
+      "price": 2800,
+      "brand": "tianqiong",
+      "difficulty": 3,
+      "wires": 6,
+      "wiringHidden": false,
+      "model": "models/implants/implant_precision_arm.glb",
+      "thumb": "models/implants/thumbs/implant_precision_arm.png"
+    },
+    "dimensions": {
+      "y": 0.75
+    },
+    "triangleLimit": 50000,
+    "textureLimit": 2048,
+    "origin": "flange",
+    "prompt": "a single cyberpunk prosthetic left arm from shoulder to fingertips, slender and elegant, long thin fingers with precise micro joints at every knuckle, a glass-covered forearm panel showing fine wiring inside, arm hanging straight, fingers relaxed, full length visible, not cropped, clean white ceramic shell, thin gold lines, medical grade, standard circular connector flange at the shoulder end with one alignment notch, a ring of small colored pin contacts and a cyan glowing inner ring, isolated product shot, centered, 3/4 view, plain white background, soft even studio lighting, no shadows, high detail",
+    "calibration": {
+      "anchor": [
+        0,
+        0.49944,
+        0
+      ]
+    }
+  },
+  {
+    "meta": {
+      "id": "blade_arm",
+      "name": "折叠刃臂",
+      "slot": "arm",
+      "desc": "前臂藏一把折叠刀，弹出即用",
+      "load": 4,
+      "price": 3500,
+      "brand": "ghost",
+      "difficulty": 3,
+      "wires": 6,
+      "wiringHidden": true,
+      "model": "models/implants/implant_blade_arm.glb",
+      "thumb": "models/implants/thumbs/implant_blade_arm.png"
+    },
+    "dimensions": {
+      "y": 0.75
+    },
+    "triangleLimit": 50000,
+    "textureLimit": 2048,
+    "origin": "flange",
+    "prompt": "a single cyberpunk prosthetic left arm from shoulder to fingertips, built from mismatched salvaged parts, a folding knife blade half-extended from a slot along the outer forearm, arm hanging straight, full length visible, not cropped, scrap-built, exposed wires, duct tape, crude welds, standard circular connector flange at the shoulder end with one alignment notch, a ring of small colored pin contacts and a cyan glowing inner ring, isolated product shot, centered, 3/4 view, plain white background, soft even studio lighting, no shadows, high detail",
+    "calibration": {
+      "anchor": [
+        -0.015,
+        0.50005,
+        0
+      ]
+    }
+  },
+  {
+    "meta": {
+      "id": "sprint_leg",
+      "name": "疾风跑腿",
+      "slot": "leg",
+      "desc": "跑速 ×2，连续送单 8 小时不累",
+      "load": 3,
+      "price": 1800,
+      "brand": "anvil",
+      "difficulty": 2,
+      "wires": 4,
+      "wiringHidden": false,
+      "model": "models/implants/implant_sprint_leg.glb",
+      "thumb": "models/implants/thumbs/implant_sprint_leg.png"
+    },
+    "dimensions": {
+      "y": 0.85
+    },
+    "triangleLimit": 50000,
+    "textureLimit": 2048,
+    "origin": "flange",
+    "prompt": "a single cyberpunk prosthetic left leg from mid-thigh to foot, runner design with a curved carbon-fiber blade lower leg, exposed shock absorber at the knee, a row of small cyan indicator lights on the side, full length visible, not cropped, industrial brushed steel, orange safety paint, hazard stripes, standard circular connector flange at the thigh end with one alignment notch, a ring of small colored pin contacts and a cyan glowing inner ring, isolated product shot, centered, 3/4 view, plain white background, soft even studio lighting, no shadows, high detail",
+    "calibration": {
+      "anchor": [
+        0,
+        0.50004,
+        -0.09
+      ]
+    }
+  },
+  {
+    "meta": {
+      "id": "aqiang",
+      "name": "阿强",
+      "job": "送货骑手",
+      "slot": "leg",
+      "side": "left",
+      "height_m": 1.75,
+      "slots": {},
+      "model": "models/patients/patient_aqiang.glb",
+      "thumb": "models/patients/thumbs/patient_aqiang.png"
+    },
+    "dimensions": {
+      "y": 1.75
+    },
+    "triangleLimit": 80000,
+    "textureLimit": 2048,
+    "origin": "base",
+    "prompt": "full body character, standing in A-pose, arms held 30 degrees away from the body with clear gaps between arms and torso, legs slightly apart, front view, a tired delivery rider in his 30s, short black hair, cheap yellow rain jacket with reflective strips, tight black shorts that leave both thighs bare, sneakers, delivery helmet clipped to his belt, cyberpunk street style, neutral expression, mouth closed, hands empty, full body visible, not cropped, plain white background, soft even studio lighting, no shadows, high detail"
+  },
+  {
+    "meta": {
+      "id": "jinya",
+      "name": "金牙",
+      "job": "夜市二手贩子",
+      "slot": "eye",
+      "side": null,
+      "height_m": 1.75,
+      "slots": {},
+      "model": "models/patients/patient_jinya.glb",
+      "thumb": "models/patients/thumbs/patient_jinya.png"
+    },
+    "dimensions": {
+      "y": 1.75
+    },
+    "triangleLimit": 80000,
+    "textureLimit": 2048,
+    "origin": "base",
+    "prompt": "full body character, standing in A-pose, arms held 30 degrees away from the body with clear gaps between arms and torso, legs slightly apart, front view, a wiry night-market vendor in his 50s, slicked-back gray hair, one gold front tooth, loud patterned short-sleeve shirt, small belt pouch, loose trousers, sandals, face clearly visible, no glasses, cyberpunk street style, neutral expression, mouth closed, hands empty, full body visible, not cropped, plain white background, soft even studio lighting, no shadows, high detail"
+  },
+  {
+    "meta": {
+      "id": "xiaolin",
+      "name": "小林",
+      "job": "公司码农",
+      "slot": "arm",
+      "side": "left",
+      "height_m": 1.75,
+      "slots": {},
+      "model": "models/patients/patient_xiaolin.glb",
+      "thumb": "models/patients/thumbs/patient_xiaolin.png"
+    },
+    "dimensions": {
+      "y": 1.75
+    },
+    "triangleLimit": 80000,
+    "textureLimit": 2048,
+    "origin": "base",
+    "prompt": "full body character, standing in A-pose, arms held 30 degrees away from the body with clear gaps between arms and torso, legs slightly apart, front view, a young office programmer in his 20s, messy hair, dark circles under the eyes, gray short-sleeve company t-shirt with a lanyard badge, a wrist brace on his left wrist, jeans, sneakers, cyberpunk street style, neutral expression, mouth closed, hands empty, full body visible, not cropped, plain white background, soft even studio lighting, no shadows, high detail"
+  },
+  {
+    "meta": {
+      "id": "lili",
+      "name": "莉莉",
+      "job": "全息主播",
+      "slot": "face",
+      "side": null,
+      "height_m": 1.75,
+      "slots": {},
+      "model": "models/patients/patient_lili.glb",
+      "thumb": "models/patients/thumbs/patient_lili.png"
+    },
+    "dimensions": {
+      "y": 1.75
+    },
+    "triangleLimit": 80000,
+    "textureLimit": 2048,
+    "origin": "base",
+    "prompt": "full body character, standing in A-pose, arms held 30 degrees away from the body with clear gaps between arms and torso, legs slightly apart, front view, a young female livestreamer in her 20s, pastel pink bob haircut, oversized iridescent bomber jacket, high-waisted pants, platform sneakers, face fully visible, no mask, no headset, cyberpunk street style, neutral expression, mouth closed, hands empty, full body visible, not cropped, plain white background, soft even studio lighting, no shadows, high detail"
+  },
+  {
+    "meta": {
+      "id": "daoba",
+      "name": "刀疤",
+      "job": "帮派打手",
+      "slot": "arm",
+      "side": "left",
+      "height_m": 1.75,
+      "slots": {},
+      "model": "models/patients/patient_daoba.glb",
+      "thumb": "models/patients/thumbs/patient_daoba.png"
+    },
+    "dimensions": {
+      "y": 1.75
+    },
+    "triangleLimit": 80000,
+    "textureLimit": 2048,
+    "origin": "base",
+    "prompt": "full body character, standing in A-pose, arms held 30 degrees away from the body with clear gaps between arms and torso, legs slightly apart, front view, a muscular gang enforcer in his 40s, shaved head, a long scar across his left cheek, sleeveless black tactical vest leaving both arms bare, tattooed arms, cargo pants, combat boots, cyberpunk street style, neutral expression, mouth closed, hands empty, full body visible, not cropped, plain white background, soft even studio lighting, no shadows, high detail"
+  },
+  {
+    "meta": {
+      "id": "surgery_rig",
+      "name": "立式手术架",
+      "model": "models/props/prop_surgery_rig.glb"
+    },
+    "dimensions": {
+      "x": 1.2,
+      "y": 2.2
+    },
+    "triangleLimit": 40000,
+    "textureLimit": 2048,
+    "origin": "base",
+    "prompt": "a vertical surgical frame where a patient stands upright, open rectangular metal frame with mechanical restraint clamps at wrist and ankle height, a cable bundle running over the top, empty in the middle, cyberpunk back-room clinic, worn industrial metal, retrofitted with exposed cables and small neon accents, isolated product shot, centered, 3/4 view, plain white background, soft even studio lighting, no shadows, high detail"
+  },
+  {
+    "meta": {
+      "id": "surgery_lamp",
+      "name": "手术灯",
+      "model": "models/props/prop_surgery_lamp.glb"
+    },
+    "dimensions": {},
+    "triangleLimit": 20000,
+    "textureLimit": 2048,
+    "origin": "base",
+    "prompt": "a multi-head surgical lamp on an articulated ceiling arm, cyberpunk back-room clinic, worn industrial metal, retrofitted with exposed cables and small neon accents, isolated product shot, centered, 3/4 view, plain white background, soft even studio lighting, no shadows, high detail",
+    "calibration": {
+      "uniformScale": 1.3299862013931607
+    }
+  },
+  {
+    "meta": {
+      "id": "tool_cart",
+      "name": "器械推车",
+      "model": "models/props/prop_tool_cart.glb"
+    },
+    "dimensions": {
+      "y": 0.9
+    },
+    "triangleLimit": 20000,
+    "textureLimit": 2048,
+    "origin": "base",
+    "prompt": "a rolling instrument cart with two trays of surgical tools, cyberpunk back-room clinic, worn industrial metal, retrofitted with exposed cables and small neon accents, isolated product shot, centered, 3/4 view, plain white background, soft even studio lighting, no shadows, high detail"
+  },
+  {
+    "meta": {
+      "id": "recycle_tray",
+      "name": "回收托盘",
+      "model": "models/props/prop_recycle_tray.glb"
+    },
+    "dimensions": {
+      "x": 0.6,
+      "z": 0.4,
+      "y": 0.8
+    },
+    "triangleLimit": 20000,
+    "textureLimit": 2048,
+    "origin": "base",
+    "prompt": "a large steel recycling tray on a stand, with a metal grate at the bottom, cyberpunk back-room clinic, worn industrial metal, retrofitted with exposed cables and small neon accents, isolated product shot, centered, 3/4 view, plain white background, soft even studio lighting, no shadows, high detail",
+    "calibration": {
+      "featureSpan": {
+        "z": 0.697368
+      }
+    }
+  },
+  {
+    "meta": {
+      "id": "implant_shelf",
+      "name": "义体货架",
+      "model": "models/props/prop_implant_shelf.glb"
+    },
+    "dimensions": {
+      "x": 1.5,
+      "y": 2
+    },
+    "triangleLimit": 20000,
+    "textureLimit": 2048,
+    "origin": "base",
+    "prompt": "a metal shelving unit with four empty shelves and a price tag slot on each shelf, cyberpunk back-room clinic, worn industrial metal, retrofitted with exposed cables and small neon accents, isolated product shot, centered, 3/4 view, plain white background, soft even studio lighting, no shadows, high detail"
+  },
+  {
+    "meta": {
+      "id": "laser_lv1",
+      "name": "激光刀 Lv1（改装电焊枪）",
+      "model": "models/props/prop_laser_lv1.glb",
+      "upgrade": {
+        "key": "laser",
+        "level": 1
+      }
+    },
+    "dimensions": {
+      "z": 0.35
+    },
+    "triangleLimit": 20000,
+    "textureLimit": 1024,
+    "origin": "base",
+    "prompt": "a modified welding torch converted into a laser scalpel, taped grip, exposed wires, cyberpunk back-room clinic, worn industrial metal, retrofitted with exposed cables and small neon accents, isolated product shot, centered, 3/4 view, plain white background, soft even studio lighting, no shadows, high detail"
+  },
+  {
+    "meta": {
+      "id": "laser_lv2",
+      "name": "激光刀 Lv2（精密激光笔）",
+      "model": "models/props/prop_laser_lv2.glb",
+      "upgrade": {
+        "key": "laser",
+        "level": 2
+      }
+    },
+    "dimensions": {
+      "z": 0.25
+    },
+    "triangleLimit": 20000,
+    "textureLimit": 1024,
+    "origin": "base",
+    "prompt": "a sleek precision laser scalpel pen with a slim emitter tip, cyberpunk back-room clinic, worn industrial metal, retrofitted with exposed cables and small neon accents, isolated product shot, centered, 3/4 view, plain white background, soft even studio lighting, no shadows, high detail"
+  },
+  {
+    "meta": {
+      "id": "scanner_lv1",
+      "name": "神经扫描仪 Lv1（旧显像管显示器）",
+      "model": "models/props/prop_scanner_lv1.glb",
+      "upgrade": {
+        "key": "scanner",
+        "level": 1
+      }
+    },
+    "dimensions": {
+      "x": 0.5
+    },
+    "triangleLimit": 20000,
+    "textureLimit": 1024,
+    "origin": "base",
+    "prompt": "an old bulky CRT monitor with a scanning antenna attached on top, cyberpunk back-room clinic, worn industrial metal, retrofitted with exposed cables and small neon accents, isolated product shot, centered, 3/4 view, plain white background, soft even studio lighting, no shadows, high detail"
+  },
+  {
+    "meta": {
+      "id": "scanner_lv2",
+      "name": "神经扫描仪 Lv2（全息扫描屏）",
+      "model": "models/props/prop_scanner_lv2.glb",
+      "upgrade": {
+        "key": "scanner",
+        "level": 2
+      }
+    },
+    "dimensions": {
+      "x": 0.6
+    },
+    "triangleLimit": 20000,
+    "textureLimit": 1024,
+    "origin": "base",
+    "prompt": "a slim holographic scanner display panel on an adjustable stand, cyberpunk back-room clinic, worn industrial metal, retrofitted with exposed cables and small neon accents, isolated product shot, centered, 3/4 view, plain white background, soft even studio lighting, no shadows, high detail"
+  },
+  {
+    "meta": {
+      "id": "surgery_table",
+      "name": "卧式手术台",
+      "model": "models/props/prop_surgery_table.glb",
+      "upgrade": null,
+      "patientPose": {
+        "rotationX": -1.5707963267948966,
+        "positionByPatient": {
+          "aqiang": [
+            -0.207,
+            1.0145,
+            0.79
+          ],
+          "jinya": [
+            -0.207,
+            0.986,
+            0.79
+          ],
+          "xiaolin": [
+            -0.207,
+            0.9929,
+            0.79
+          ],
+          "lili": [
+            -0.207,
+            0.9955,
+            0.79
+          ],
+          "daoba": [
+            -0.207,
+            1.0242,
+            0.79
+          ]
+        }
+      }
+    },
+    "dimensions": {
+      "y": 0.873,
+      "z": 2.05
+    },
+    "calibration": {
+      "rotation": [
+        0,
+        0.7071067811865476,
+        0,
+        0.7071067811865476
+      ],
+      "uniformScale": 2.05,
+      "featureSpan": {
+        "y": 0.3572499
+      }
+    },
+    "triangleLimit": 20000,
+    "textureLimit": 2048,
+    "origin": "base",
+    "prompt": "One horizontal cyberpunk underground clinic operating table for a full-length adult lying on their back. A long straight level continuous segmented dark petrol-blue upholstered mattress, low flat head pad, both arm boards extend sideways at torso level, flat unobstructed top, 2.05 metres long and 0.84 metre high. Chunky short hydraulic lift pedestal on a stable wide plinth. Brushed gunmetal, worn cream enamel side panels, small amber caution stripes and a single inset turquoise status light. Strong practical silhouette, no arches or elevated rails, no people, no equipment above the mattress. Isolated product photograph, full object including feet, wide white margins, plain white studio background, soft even lighting, elevated three-quarter side view, high detail."
+  },
+  {
+    "meta": {
+      "id": "night_eye",
+      "name": "夜视翻新眼",
+      "slot": "eye",
+      "desc": "二手夜视镜头，有点花，但夜市走黑路看得清",
+      "load": 1,
+      "price": 350,
+      "brand": "laozhou",
+      "difficulty": 1,
+      "wires": 3,
+      "wiringHidden": false,
+      "model": "models/implants/implant_night_eye.glb",
+      "thumb": "models/implants/thumbs/implant_night_eye.png"
+    },
+    "dimensions": {
+      "x": 0.025
+    },
+    "triangleLimit": 20000,
+    "textureLimit": 1024,
+    "origin": "sphere",
+    "prompt": "a single cyberpunk cybernetic eye implant, spherical eyeball module with a large night-vision lens glowing faint green, scratched and repainted housing, mismatched screws, a strip of worn tape, held in a thin dented mounting ring, old steel with touch-up paint, standard connector stub at the back with one alignment notch and small colored pin contacts, isolated product shot, centered, 3/4 view, plain white background, soft even studio lighting, no shadows, high detail",
+    "calibration": {
+      "anchor": [
+        0.045,
+        0,
+        -0.015
+      ],
+      "featureSpan": {
+        "x": 0.785
+      }
+    }
+  },
+  {
+    "meta": {
+      "id": "hawk_eye",
+      "name": "鹰眼瞄准义眼",
+      "slot": "eye",
+      "desc": "军规变焦加弹道计算，三百米外看清一张脸",
+      "load": 2,
+      "price": 1400,
+      "brand": "tianqiong",
+      "difficulty": 2,
+      "wires": 4,
+      "wiringHidden": false,
+      "model": "models/implants/implant_hawk_eye.glb",
+      "thumb": "models/implants/thumbs/implant_hawk_eye.png"
+    },
+    "dimensions": {
+      "x": 0.025
+    },
+    "triangleLimit": 20000,
+    "textureLimit": 1024,
+    "origin": "sphere",
+    "prompt": "a single cyberpunk cybernetic eye implant, spherical eyeball module with a long multi-stage telescopic zoom lens on the front, smooth white and titanium-grey medical housing, a thin blue light ring around the lens, tiny rangefinder window on one side, held in a thin mounting ring, clean clinical finish, standard connector stub at the back with one alignment notch and small colored pin contacts, isolated product shot, centered, 3/4 view, plain white background, soft even studio lighting, no shadows, high detail",
+    "calibration": {
+      "anchor": [
+        0.045,
+        0,
+        -0.015
+      ],
+      "featureSpan": {
+        "x": 0.785
+      }
+    }
+  },
+  {
+    "meta": {
+      "id": "rebreather_jaw",
+      "name": "滤毒呼吸下颌",
+      "slot": "face",
+      "desc": "工业滤毒口鼻加下颌骨强化，难看但耐用",
+      "load": 1,
+      "price": 900,
+      "brand": "anvil",
+      "difficulty": 1,
+      "wires": 3,
+      "wiringHidden": false,
+      "model": "models/implants/implant_rebreather_jaw.glb",
+      "thumb": "models/implants/thumbs/implant_rebreather_jaw.png"
+    },
+    "dimensions": {
+      "x": 0.16,
+      "y": 0.12
+    },
+    "triangleLimit": 20000,
+    "textureLimit": 1024,
+    "origin": "inner",
+    "prompt": "a cyberpunk lower-face respirator mask covering the mouth, jaw and chin, two round industrial filter canisters on the cheeks, reinforced steel jaw plate, brushed steel with orange safety paint and hazard stripes, rubber seal along the edge, small status LED, isolated product shot, centered, front 3/4 view, plain white background, soft even studio lighting, no shadows, high detail",
+    "calibration": {
+      "anchor": [
+        0,
+        0,
+        0.215
+      ]
+    }
+  },
+  {
+    "meta": {
+      "id": "holo_face",
+      "name": "全息换脸面罩",
+      "slot": "face",
+      "desc": "全息投影换脸，还能实时翻译；来路不明",
+      "load": 3,
+      "price": 2200,
+      "brand": "ghost",
+      "difficulty": 3,
+      "wires": 5,
+      "wiringHidden": true,
+      "model": "models/implants/implant_holo_face.glb",
+      "thumb": "models/implants/thumbs/implant_holo_face.png"
+    },
+    "dimensions": {
+      "x": 0.16,
+      "y": 0.12
+    },
+    "triangleLimit": 20000,
+    "textureLimit": 1024,
+    "origin": "inner",
+    "prompt": "a cyberpunk lower-face holographic projector mask covering the mouth, jaw and chin, matte black shell with a grid of tiny projector lenses on the front, a thin red light strip along the jawline, rough weld seams and improvised wiring at the sides, black-market modified look, isolated product shot, centered, front 3/4 view, plain white background, soft even studio lighting, no shadows, high detail",
+    "calibration": {
+      "anchor": [
+        0,
+        0,
+        0.215
+      ]
+    }
+  },
+  {
+    "meta": {
+      "id": "refurb_arm",
+      "name": "老周翻新义手",
+      "slot": "arm",
+      "desc": "老周从报废义体上拆的手，关节有点响",
+      "load": 2,
+      "price": 1200,
+      "brand": "laozhou",
+      "difficulty": 2,
+      "wires": 4,
+      "wiringHidden": false,
+      "model": "models/implants/implant_refurb_arm.glb",
+      "thumb": "models/implants/thumbs/implant_refurb_arm.png"
+    },
+    "dimensions": {
+      "y": 0.75
+    },
+    "triangleLimit": 50000,
+    "textureLimit": 2048,
+    "origin": "flange",
+    "prompt": "a single cyberpunk prosthetic left arm from shoulder to fingertips, assembled from mismatched second-hand parts, dull grey steel with patches of different paint, visible repair welds, a strip of tape around the forearm, exposed cables at the elbow, slightly oversized worn fingers, a round shoulder flange at the top, arm hanging straight down with fingers relaxed, isolated product shot, centered, 3/4 view, plain white background, soft even studio lighting, no shadows, high detail",
+    "calibration": {
+      "anchor": [
+        -0.056,
+        0.49996,
+        0
+      ]
+    }
+  },
+  {
+    "meta": {
+      "id": "cargo_arm",
+      "name": "搬运液压臂",
+      "slot": "arm",
+      "desc": "液压重载臂，单手能扛两百公斤",
+      "load": 3,
+      "price": 2000,
+      "brand": "anvil",
+      "difficulty": 2,
+      "wires": 5,
+      "wiringHidden": false,
+      "model": "models/implants/implant_cargo_arm.glb",
+      "thumb": "models/implants/thumbs/implant_cargo_arm.png"
+    },
+    "dimensions": {
+      "y": 0.78
+    },
+    "triangleLimit": 50000,
+    "textureLimit": 2048,
+    "origin": "flange",
+    "prompt": "a single heavy-duty cyberpunk prosthetic left arm from shoulder to fingertips, thick industrial build with exposed hydraulic pistons along the upper arm and forearm, brushed steel plates with orange safety paint and black hazard stripes, oversized reinforced knuckles, a round shoulder flange at the top, arm hanging straight down with fingers relaxed, isolated product shot, centered, 3/4 view, plain white background, soft even studio lighting, no shadows, high detail",
+    "calibration": {
+      "anchor": [
+        0.038,
+        0.49995,
+        -0.006
+      ]
+    }
+  },
+  {
+    "meta": {
+      "id": "salvage_leg",
+      "name": "回收工装腿",
+      "slot": "leg",
+      "desc": "拆车件拼的工装腿，走是能走",
+      "load": 2,
+      "price": 900,
+      "brand": "laozhou",
+      "difficulty": 1,
+      "wires": 3,
+      "wiringHidden": false,
+      "model": "models/implants/implant_salvage_leg.glb",
+      "thumb": "models/implants/thumbs/implant_salvage_leg.png"
+    },
+    "dimensions": {
+      "y": 0.85
+    },
+    "triangleLimit": 50000,
+    "textureLimit": 2048,
+    "origin": "flange",
+    "prompt": "a single cyberpunk prosthetic left leg from mid-thigh to foot, built from salvaged vehicle parts, a simple steel pipe shin, a boxy repainted knee joint with a rubber boot, a flat work-boot style foot, dull grey and faded blue paint with scratches, a round thigh flange at the top, standing straight, isolated product shot, centered, 3/4 view, plain white background, soft even studio lighting, no shadows, high detail",
+    "calibration": {
+      "anchor": [
+        0,
+        0.49998,
+        -0.0361
+      ]
+    }
+  },
+  {
+    "meta": {
+      "id": "jump_leg",
+      "name": "液压弹跳腿",
+      "slot": "leg",
+      "desc": "双级液压，原地跳上二楼；鬼市出品，不保修",
+      "load": 4,
+      "price": 2600,
+      "brand": "ghost",
+      "difficulty": 3,
+      "wires": 5,
+      "wiringHidden": true,
+      "model": "models/implants/implant_jump_leg.glb",
+      "thumb": "models/implants/thumbs/implant_jump_leg.png"
+    },
+    "dimensions": {
+      "y": 0.85
+    },
+    "triangleLimit": 50000,
+    "textureLimit": 2048,
+    "origin": "flange",
+    "prompt": "a single cyberpunk prosthetic left leg from mid-thigh to foot, two-stage hydraulic jump leg with a large exposed piston and coil spring behind the knee, reverse-jointed digitigrade lower leg, matte black armor plates with a thin red light strip, rough weld seams, a round thigh flange at the top, standing straight, isolated product shot, centered, 3/4 view, plain white background, soft even studio lighting, no shadows, high detail",
+    "calibration": {
+      "anchor": [
+        0.015,
+        0.4996,
+        0.006
+      ]
+    }
+  }
+]

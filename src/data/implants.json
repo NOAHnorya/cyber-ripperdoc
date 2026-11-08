@@ -1,0 +1,182 @@
+[
+  {
+    "id": "appraiser_eye",
+    "name": "鉴伪义眼",
+    "slot": "eye",
+    "desc": "扫描物品和电子货币，一眼识别假货和真实价值",
+    "load": 1,
+    "price": 600,
+    "brand": "anvil",
+    "difficulty": 1,
+    "wires": 3,
+    "wiringHidden": false,
+    "model": "models/implants/implant_appraiser_eye.glb",
+    "thumb": "models/implants/thumbs/implant_appraiser_eye.png",
+    "size_m": [
+      0.031832,
+      0.030049,
+      0.023842
+    ],
+    "tris": 19632
+  },
+  {
+    "id": "voice_mask",
+    "name": "变声面甲",
+    "slot": "face",
+    "desc": "覆盖下半张脸，可以变声和实时翻译",
+    "load": 2,
+    "price": 1800,
+    "brand": "tianqiong",
+    "difficulty": 2,
+    "wires": 4,
+    "wiringHidden": false,
+    "model": "models/implants/implant_voice_mask.glb",
+    "thumb": "models/implants/thumbs/implant_voice_mask.png",
+    "size_m": [
+      0.159386,
+      0.119254,
+      0.118502
+    ],
+    "tris": 19312
+  },
+  {
+    "id": "precision_arm",
+    "name": "精工义手",
+    "slot": "arm",
+    "desc": "手指稳定到微米级，打字、修表都不抖",
+    "load": 2,
+    "price": 2800,
+    "brand": "tianqiong",
+    "difficulty": 3,
+    "wires": 6,
+    "wiringHidden": false,
+    "model": "models/implants/implant_precision_arm.glb",
+    "thumb": "models/implants/thumbs/implant_precision_arm.png",
+    "size_m": [
+      0.1318,
+      0.749853,
+      0.117949
+    ],
+    "tris": 49004
+  },
+  {
+    "id": "blade_arm",
+    "name": "折叠刃臂",
+    "slot": "arm",
+    "desc": "前臂藏一把折叠刀，弹出即用",
+    "load": 4,
+    "price": 3500,
+    "brand": "ghost",
+    "difficulty": 3,
+    "wires": 6,
+    "wiringHidden": true,
+    "model": "models/implants/implant_blade_arm.glb",
+    "thumb": "models/implants/thumbs/implant_blade_arm.png",
+    "size_m": [
+      0.221082,
+      0.749891,
+      0.137853
+    ],
+    "tris": 48996
+  },
+  {
+    "id": "sprint_leg",
+    "name": "疾风跑腿",
+    "slot": "leg",
+    "desc": "跑速 ×2，连续送单 8 小时不累",
+    "load": 3,
+    "price": 1800,
+    "brand": "anvil",
+    "difficulty": 2,
+    "wires": 4,
+    "wiringHidden": false,
+    "model": "models/implants/implant_sprint_leg.glb",
+    "thumb": "models/implants/thumbs/implant_sprint_leg.png",
+    "size_m": [
+      0.200865,
+      0.849982,
+      0.349879
+    ],
+    "tris": 48832
+  },
+  {
+    "id": "refurb_arm",
+    "name": "老周翻新义手",
+    "slot": "arm",
+    "desc": "老周从报废义体上拆的手，关节有点响",
+    "load": 2,
+    "price": 1200,
+    "brand": "laozhou",
+    "difficulty": 2,
+    "wires": 4,
+    "wiringHidden": false,
+    "model": "models/implants/implant_refurb_arm.glb",
+    "thumb": "models/implants/thumbs/implant_refurb_arm.png",
+    "size_m": [
+      0.199408,
+      0.7499,
+      0.20874
+    ],
+    "tris": 48888
+  },
+  {
+    "id": "cargo_arm",
+    "name": "搬运液压臂",
+    "slot": "arm",
+    "desc": "液压重载臂，单手能扛两百公斤",
+    "load": 3,
+    "price": 2000,
+    "brand": "anvil",
+    "difficulty": 2,
+    "wires": 5,
+    "wiringHidden": false,
+    "model": "models/implants/implant_cargo_arm.glb",
+    "thumb": "models/implants/thumbs/implant_cargo_arm.png",
+    "size_m": [
+      0.259182,
+      0.779943,
+      0.165282
+    ],
+    "tris": 48916
+  },
+  {
+    "id": "salvage_leg",
+    "name": "回收工装腿",
+    "slot": "leg",
+    "desc": "拆车件拼的工装腿，走是能走",
+    "load": 2,
+    "price": 900,
+    "brand": "laozhou",
+    "difficulty": 1,
+    "wires": 3,
+    "wiringHidden": false,
+    "model": "models/implants/implant_salvage_leg.glb",
+    "thumb": "models/implants/thumbs/implant_salvage_leg.png",
+    "size_m": [
+      0.20513,
+      0.849962,
+      0.336929
+    ],
+    "tris": 48834
+  },
+  {
+    "id": "jump_leg",
+    "name": "液压弹跳腿",
+    "slot": "leg",
+    "desc": "双级液压，原地跳上二楼；鬼市出品，不保修",
+    "load": 4,
+    "price": 2600,
+    "brand": "ghost",
+    "difficulty": 3,
+    "wires": 5,
+    "wiringHidden": true,
+    "model": "models/implants/implant_jump_leg.glb",
+    "thumb": "models/implants/thumbs/implant_jump_leg.png",
+    "size_m": [
+      0.166323,
+      0.849845,
+      0.408328
+    ],
+    "tris": 48940
+  }
+]

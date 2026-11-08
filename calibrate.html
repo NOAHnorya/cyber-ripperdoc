@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>标定工具 · 赛博义体诊所</title>
+    <style>
+      html, body { margin: 0; height: 100%; background: #0a0a12; color: #e8e6f0; font-family: 'PingFang SC', 'Microsoft YaHei', sans-serif; overflow: hidden; }
+      #view { position: fixed; inset: 0; }
+      #panel { position: fixed; left: 12px; top: 12px; width: 300px; background: rgba(10, 10, 18, 0.9); border: 1px solid #05d9e8; padding: 12px; display: flex; flex-direction: column; gap: 8px; font-size: 13px; max-height: calc(100vh - 24px); overflow: auto; }
+      #panel h1 { font-size: 16px; margin: 0 0 4px; color: #fcee0a; }
+      label { display: flex; justify-content: space-between; align-items: center; gap: 8px; }
+      select, button { font: inherit; background: #15151f; color: #e8e6f0; border: 1px solid #3a3a50; padding: 5px 8px; }
+      button { cursor: pointer; }
+      button.on { background: #05d9e8; color: #111; }
+      button.primary { background: #fcee0a; color: #111; border-color: #fcee0a; }
+      .row { display: flex; gap: 6px; flex-wrap: wrap; }
+      .tip { color: #8a87a0; line-height: 1.5; }
+      #status { color: #39ff14; min-height: 18px; }
+      pre { background: #07070c; padding: 6px; font-size: 11px; max-height: 160px; overflow: auto; margin: 0; }
+    </style>
+  </head>
+  <body>
+    <div id="view"></div>
+    <div id="panel">
+      <h1>标定工具</h1>
+      <div class="tip">给每个病人调好四个部位的"切割体积"（橙色框）和"接口"（坐标轴），再预览义体装上去对不对。开发服务器下点保存会直接写进 src/data/calibration/。</div>
+      <label>病人 <select id="patient"></select></label>
+      <label>部位 <select id="slot"></select></label>
+      <div class="row">
+        <button data-target="box" class="on">调切割框</button>
+        <button data-target="socket">调接口</button>
+        <button data-target="implant">调义体偏移</button>
+      </div>
+      <div class="row">
+        <button data-mode="translate" class="on">移动 W</button>
+        <button data-mode="rotate">旋转 E</button>
+        <button data-mode="scale">缩放 R</button>
+      </div>
+      <label>预览义体 <select id="implant"></select></label>
+      <div class="row">
+        <button id="previewCut">切开预览</button>
+        <button id="resetSlot">这个部位恢复默认</button>
+      </div>
+      <div class="row">
+        <button id="savePatient" class="primary">保存病人标定</button>
+        <button id="saveImplant">保存义体偏移</button>
+        <button id="download">下载 JSON</button>
+      </div>
+      <div id="status"></div>
+      <pre id="json"></pre>
+    </div>
+    <script type="module" src="/src/tools/calibrate.js"></script>
+  </body>
+</html>

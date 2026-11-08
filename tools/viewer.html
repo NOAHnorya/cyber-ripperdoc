@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>霓虹义体诊所 · 模型验收</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#172026;color:#e7f0ee;font:15px system-ui}header{position:fixed;z-index:1;top:12px;left:14px;background:#202b30ed;padding:12px;max-width:90vw}select{font:inherit}canvas{display:block}output{display:block;margin-top:6px}
+</style>
+<script type="importmap">{"imports":{"three":"./node_modules/three/build/three.module.js","three/addons/":"./node_modules/three/examples/jsm/"}}</script>
+<header><label>检查模型 <select id="assets"><option>全部</option></select></label> <label id="fit" hidden>试躺 <select id="patient"><option value="">空台</option></select></label><output id="status" aria-live="polite">读取资产清单…</output></header>
+<script type="module">
+import * as T from 'three';
+import {GLTFLoader} from 'three/addons/loaders/GLTFLoader.js';
+import {RoomEnvironment} from 'three/addons/environments/RoomEnvironment.js';
+import {OrbitControls} from 'three/addons/controls/OrbitControls.js';
+import {MeshoptDecoder} from 'three/addons/libs/meshopt_decoder.module.js';
+const renderer=new T.WebGLRenderer({antialias:true});
+renderer.setPixelRatio(Math.min(devicePixelRatio,2));
+document.body.append(renderer.domElement);
+const scene=new T.Scene(); scene.background=new T.Color(0x172026);
+const pmrem=new T.PMREMGenerator(renderer),room=new RoomEnvironment();
+scene.environment=pmrem.fromScene(room,.04).texture;scene.environmentIntensity=.7;
+pmrem.dispose();room.dispose();
+const camera=new T.PerspectiveCamera(38,1,.0002,200);
+const controls=new OrbitControls(camera,renderer.domElement);
+scene.add(new T.HemisphereLight(0xffffff,0xa8bfd0,2));
+const key=new T.DirectionalLight(0xfff2df,2.4);key.position.set(2,4,3);scene.add(key);
+const loader=new GLTFLoader().setMeshoptDecoder(MeshoptDecoder);
+const models=new T.Group();scene.add(models);
+const objects=[],issues=[],patients=new Map();
+const fit=document.getElementById('fit'),patient=document.getElementById('patient');
+let reclining=null;
+function frame(obj) {
+  const box=new T.Box3().setFromObject(obj),center=box.getCenter(new T.Vector3()),size=box.getSize(new T.Vector3());
+  const radius=Math.max(size.y,size.x/camera.aspect,size.z,.02)*1.9;
+  camera.position.copy(center).add(new T.Vector3(radius*.1,radius*.12,radius));
+  controls.target.copy(center);controls.update();
+}
+function resize(){renderer.setSize(innerWidth,innerHeight);camera.aspect=innerWidth/innerHeight;camera.updateProjectionMatrix()}
+resize();addEventListener('resize',resize);
+const select=document.querySelector('select'),status=document.querySelector('output');
+let cursor=0;
+for(const group of ['implants','patients','props']){
+  const response=await fetch('../src/data/'+group+'.json');
+  if(response.status===404)continue;
+  if(!response.ok){issues.push(group+' 清单读取失败');continue}
+  for(const entry of await response.json()){
+    try{
+      const {scene:model}=await loader.loadAsync('../public/'+entry.model);
+      const box=new T.Box3().setFromObject(model),size=box.getSize(new T.Vector3());
+      const holder=new T.Group();holder.add(model,new T.AxesHelper(Math.max(size.x,size.y,size.z)*.45));
+      holder.position.x=cursor-box.min.x;cursor+=size.x+.08;models.add(holder);objects.push(holder);
+      holder.userData.asset=entry;
+      select.add(new Option(entry.name,objects.length));
+      if(group==='patients'){
+        patients.set(entry.id,model);
+        patient.add(new Option(entry.name,entry.id));
+      }
+    }catch(e){issues.push(entry.id+' 加载失败');console.error(e)}
+  }
+}
+status.textContent=['已加载 '+objects.length+' 件',...issues].join(' · ');
+if(objects.length)frame(models);else camera.position.z=3;
+function showSelection(){
+  reclining?.removeFromParent();
+  reclining=null;
+  const selected=objects[select.selectedIndex-1];
+  for(const holder of objects)holder.visible=!selected || holder===selected;
+  const pose=selected?.userData.asset.patientPose;
+  fit.hidden=!pose;
+  if(pose && patients.has(patient.value)){
+    reclining=patients.get(patient.value).clone(true);
+    reclining.rotation.x=pose.rotationX;
+    reclining.position.fromArray(pose.positionByPatient[patient.value]);
+    selected.add(reclining);
+  }
+  frame(selected??models);
+  if(pose){
+    const target=selected.localToWorld(new T.Vector3(0,.65,0));
+    controls.target.copy(target);
+    camera.position.copy(target).add(new T.Vector3(2.65,1.6,1.35));
+    controls.update();
+  }
+}
+select.onchange=patient.onchange=showSelection;
+const query=new URLSearchParams(location.search);
+const initial=objects.findIndex(h=>h.userData.asset.id===query.get('asset'));
+if(initial>=0){
+  select.selectedIndex=initial+1;
+  if(patients.has(query.get('patient')))patient.value=query.get('patient');
+  showSelection();
+}
+renderer.setAnimationLoop(()=>renderer.render(scene,camera));
+</script></html>
